@@ -13,21 +13,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Contact form handling
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show an alert
-    alert(`Thank you, ${name}! Your message has been received. We'll get back to you at ${email} soon.`);
-    
-    // Reset form
-    this.reset();
-});
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Create success message element
+        let successMsg = this.querySelector('.success-message');
+        if (!successMsg) {
+            successMsg = document.createElement('div');
+            successMsg.className = 'success-message';
+            this.appendChild(successMsg);
+        }
+        
+        // Display success message
+        successMsg.textContent = `Thank you, ${name}! Your message has been received. We'll get back to you at ${email} soon.`;
+        successMsg.style.display = 'block';
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+            successMsg.style.display = 'none';
+        }, 5000);
+        
+        // Reset form
+        this.reset();
+    });
+}
 
 // Add active class to navigation on scroll
 window.addEventListener('scroll', function() {

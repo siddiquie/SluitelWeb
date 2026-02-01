@@ -1,0 +1,70 @@
+{
+  "site": {
+    "name": "SluitelMaker",
+    "title": "SluitelMaker - Professional Key Making Services",
+    "description": "Professional key making and locksmith services",
+    "url": "https://sluitelmaker.example.com",
+    "language": "en",
+    "timezone": "Europe/Amsterdam"
+  },
+  "theme": {
+    "name": "default",
+    "primaryColor": "#3498db",
+    "secondaryColor": "#2c3e50",
+    "accentColor": "#667eea"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "#home",
+      "order": 1
+    },
+    {
+      "label": "Services",
+      "url": "#services",
+      "order": 2
+    },
+    {
+      "label": "About",
+      "url": "#about",
+      "order": 3
+    },
+    {
+      "label": "Contact",
+      "url": "#contact",
+      "order": 4
+    }
+  ],
+  "services": [
+    {
+      "title": "Key Duplication",
+      "description": "Fast and accurate key duplication for all types of keys",
+      "icon": "key"
+    },
+    {
+      "title": "Lock Installation",
+      "description": "Professional installation of residential and commercial locks",
+      "icon": "lock"
+    },
+    {
+      "title": "Lock Repair",
+      "description": "Expert repair services for damaged or malfunctioning locks",
+      "icon": "wrench"
+    },
+    {
+      "title": "Emergency Services",
+      "description": "24/7 emergency locksmith services available",
+      "icon": "emergency"
+    }
+  ],
+  "contact": {
+    "email": "info@sluitelmaker.example.com",
+    "phone": "+31 20 123 4567",
+    "address": "Example Street 123, Amsterdam, Netherlands"
+  },
+  "cms": {
+    "version": "1.0.0",
+    "platform": "SHcms",
+    "lastModified": "2026-02-01"
+  }
+}

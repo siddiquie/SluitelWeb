@@ -1,0 +1,3 @@
+[submodule "SHcms"]
+	path = SHcms
+	url = https://github.com/siddiquie/SHcms
